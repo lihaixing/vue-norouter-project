@@ -3,6 +3,18 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+const os = require('os')
+let ip = '127.0.0.1'
+// 获取本地网卡IPv4地址
+const ifaces = os.networkInterfaces()
+for (var dev in ifaces) {
+  ifaces[dev].forEach(function (o, k) {
+    if (o.family === 'IPv4' && o.address != '127.0.0.1') {
+      ip = o.address
+      return
+    }
+  })
+}
 
 module.exports = {
   dev: {
@@ -11,10 +23,9 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
-
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: ip, // can be overwritten by process.env.HOST
+    port: 8990, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,

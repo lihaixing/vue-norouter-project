@@ -1,10 +1,11 @@
 <template>
-  <div>{{welcome}}{{k}}</div>
+  <div>{{welcome}}{{x}}</div>
 </template>
 
 <script>
   export default {
     name: 'A',
+    props: ['x'],
     data () {
       return {
         welcome: 'hello,I am component A!'

@@ -2,12 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <title>my-vue-norouter-project</title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
   </head>
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      // 获取视窗宽度
+      // let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth
+      // let htmlDom = document.getElementsByTagName('html')[0]
+      // 注意10是根据设计稿算出来的，例如设计稿宽750，字体为24px,此值=750/24
+      // 至于每个怎么算，利用sass/less的函数算
+      // htmlDom.style.fontSize = htmlWidth / 32 + 'px'
+      // window.addEventListener('resize', function () {
+      //   let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth
+      //   htmlDom.style.fontSize = htmlWidth / 32 + 'px'
+      // })
+    </script>
   </body>
 </html>

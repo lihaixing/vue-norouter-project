@@ -12,7 +12,7 @@
     <com-directives></com-directives>
 
     <h2>组件循环</h2>
-    <component-a v-for="(v,k) in list" :key="k"></component-a>
+    <component-a v-for="(v,k) in list" :key="k" :x="k"></component-a>
     <button @click="addItem">addItem</button>
 
     <h1>对象、数组循环</h1>
@@ -126,5 +126,6 @@
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+    /*font-size: 0.33rem; !*0.33=13/37.5*!*/
   }
 </style>

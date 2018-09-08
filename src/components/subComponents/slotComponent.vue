@@ -8,9 +8,9 @@
 </template>
 
 <script>
-    export default {
-        name: "slot-component"
-    }
+export default {
+  name: 'slot-component'
+}
 </script>
 
 <style scoped>
